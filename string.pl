@@ -18,3 +18,17 @@ print(uc($s),"\n");
 
 print("To lower case:\n");
 print(lc($s),"\n");
+
+my $s = "Learning Perl is easy\n";
+my $sub = "Perl";
+my $p = index($s,$sub); # rindex($s,$sub);
+print(qq\The substring "$sub" found at position "$p" in string "$s"\,"\n");
+
+my $s = "Green is my favorite color";
+my $color = substr($s, 0, 5);
+my $end = substr($s, -5);
+
+print($end, ":", $color, "\n");
+
+substr($s, 0, 5, "Red");
+print($s, "\n");
